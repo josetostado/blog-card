@@ -1,0 +1,94 @@
+/* CSS Reset */
+*, *::after, *::before {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* Variables */
+
+:root {
+
+    /* Fonts */
+    --title: 600 18px/26px Sora, sans-serif;
+    --body: 14px/22px Sora, sans-serif;
+    --small-text: 12px/20px Sora, sans-serif;
+    --tag: 600 10px/18px Sora, sans-serif;
+
+    /* Colors */
+    --title-text: #20293A;
+    --body-text: #6C727F;
+    --author-text: #6C727F;
+    --tag-text: #883AE1;
+    --tag-container: #E6D6FC;
+    --white: #FFFFFF;
+    --body--background: #FAFAF9;
+
+    /* Shadows */
+    --card-shadow: 0px 30px 100px 0px rgba(17, 23, 41, 0.05);
+}
+
+/* Global */
+
+body {
+    background-color: var(--body--background);
+}
+
+/* Blog Card */
+
+.card {
+    max-width: 368px;
+    margin: 164px auto 0 auto;
+    border-radius: 16px;
+    box-shadow: var(--card-shadow);
+}
+
+.card__content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+    padding: 16px 16px 20px 16px;
+}
+
+.card__image {
+    width: 100%;
+    height: 152px;
+    object-fit: cover;
+    border-radius: 16px;
+}
+
+.card__tag {
+    padding: 2px 16px;
+    border-radius: 16px;
+    background-color: var(--tag-container);
+    color: var(--tag-text);
+    font: var(--tag);
+}
+
+.card__title {
+    font: var(--title);
+    color: var(--title-text);
+    margin-bottom: -10px;
+}
+
+.card__description {
+    font: var(--body);
+    color: var(--body-text);
+}
+
+.card__division {
+    width: 100%;
+    height: 0.5px;
+    background-color: var(--divisor);
+}
+
+.card__footer {
+    padding: 20px 16px 20px 16px;
+    border-top: 1px solid #E6D6FC;
+}
+
+.card__author {
+    font: var(--small-text);
+    color: var(--author-text);
+}
